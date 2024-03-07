@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import ProjectsGrid from './components/ProjectsGrid'
 
 const App = () => {
   return (
-    <div>Hello world</div>
+    <>
+      <Navbar />
+      <Hero />
+      <ProjectsGrid />
+    </>
   )
 }
 
