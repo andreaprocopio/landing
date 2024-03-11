@@ -11,7 +11,7 @@ const Hero = () => {
       viewport={{ once: true }}
       transition={{
         type: "tween",
-        delay: 0.1
+        delay: 0.3
       }}
     >
         <div className="mr-auto place-self-center lg:col-span-6">

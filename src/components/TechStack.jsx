@@ -25,7 +25,8 @@ const TechStack = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "tween"
+            type: "tween",
+            delay: 0.3
           }}
         >
             <Hr />

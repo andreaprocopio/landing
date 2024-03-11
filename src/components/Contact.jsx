@@ -43,7 +43,7 @@ const Contact = ({showAlert}) => {
                 viewport={{ once: true }}
                 transition={{
                   type: "tween",
-                  delay: 0.1
+                  delay: 0.3
                 }}
             >
                 <Hr />

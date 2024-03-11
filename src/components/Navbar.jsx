@@ -12,15 +12,8 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-            <motion.div
+            <div
                 className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4"
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  type: "tween",
-                  delay: 0.1
-                }}
             >
                 <a
                 href="#"
@@ -104,7 +97,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 </div>
-            </motion.div>
+            </div>
         </nav>
     )
 }
