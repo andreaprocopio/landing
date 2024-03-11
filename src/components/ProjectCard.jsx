@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectCard = ({ technology, name, imgSrc, bgCol, link }) => {
   return (
-    <a href={link} target="_blank" className={"cursor-pointer flex-shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg " + (bgCol)}>
+    <a href={link} target="_blank" className={"cursor-pointer shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg mx-auto " + (bgCol)}>
         <svg
         className="absolute bottom-0 left-0 mb-8"
         viewBox="0 0 375 283"
@@ -43,7 +43,7 @@ const ProjectCard = ({ technology, name, imgSrc, bgCol, link }) => {
         />
         </div>
         <div className="relative text-white px-6 pb-6 mt-6">
-        <span className="block opacity-75 -mb-1">{technology}</span>
+        <span className="block opacity-75 -mb-1 text-left">{technology}</span>
         <div className="flex justify-center sm:justify-between">
             <span className="block font-semibold text-xl">{name}</span>
         </div>
