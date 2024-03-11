@@ -1,8 +1,20 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const ProjectCard = ({ technology, name, imgSrc, bgCol, link }) => {
   return (
-    <a href={link} target="_blank" className={"cursor-pointer shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg mx-auto " + (bgCol)}>
+    <motion.a
+        href={link} target="_blank"
+        className={"cursor-pointer shrink-0 m-6 relative overflow-hidden rounded-lg max-w-xs shadow-lg mx-auto " + (bgCol)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{
+            scale: 0.8,
+        }}
+        transition={{
+            type: "spring",
+            stiffness: 250
+        }}
+    >
         <svg
         className="absolute bottom-0 left-0 mb-8"
         viewBox="0 0 375 283"
@@ -48,7 +60,7 @@ const ProjectCard = ({ technology, name, imgSrc, bgCol, link }) => {
             <span className="block font-semibold text-xl">{name}</span>
         </div>
         </div>
-    </a>
+    </motion.a>
   )
 }
 

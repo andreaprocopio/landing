@@ -1,14 +1,27 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
+import { motion } from 'framer-motion'
 
 const SuccessAlert = ({closeAlert}) => {
   return (
     <>
     {createPortal(
-        <div
+        <motion.div
         id="alert-border-3"
         className="flex  items-center p-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800 fixed top-36 right-5 md:right-20"
         role="alert"
+        initial={{
+          opacity: 0,
+          x: 30
+        }}
+        animate={{
+          opacity: 1,
+          x: 0
+        }}
+        exit={{
+          opacity: 0,
+          x: 30
+        }}
       >
         <svg
           className="flex-shrink-0 w-4 h-4"
@@ -46,7 +59,7 @@ const SuccessAlert = ({closeAlert}) => {
             />
           </svg>
         </button>
-      </div>
+      </motion.div>
       ,
         document.body
     )}

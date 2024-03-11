@@ -2,12 +2,22 @@ import React from 'react'
 import Hr from './Hr'
 import { FaLocationArrow } from "react-icons/fa";
 import ProjectCard from './ProjectCard';
+import { motion } from 'framer-motion'
 
 
 const ProjectsGrid = () => {
   return (
     <section className='bg-white dark:bg-gray-900 py-10'>
-        <div className='max-w-screen-lg mx-auto p-4 text-center space-y-16'>
+        <motion.div
+            className='max-w-screen-lg mx-auto p-4 text-center space-y-16'
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "tween",
+              delay: 0.1
+            }}
+        >
             <Hr />
 
             <div className='space-y-3'>
@@ -21,7 +31,7 @@ const ProjectsGrid = () => {
                 <ProjectCard technology={"React.js"} name={"Click for Weather"} imgSrc={"/click-for-weather.png"} bgCol={"bg-orange-500"} link={"https://click-for-weather.netlify.app/"}/>
                 <ProjectCard technology={"Next.js"} name={"Info Stream"} imgSrc={"/info-stream.png"} bgCol={"bg-teal-500"} link={"https://info-stream.vercel.app/"} />
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

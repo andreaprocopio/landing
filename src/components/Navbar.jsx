@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu, GiTechnoHeart } from "react-icons/gi";
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 
 
@@ -11,7 +12,16 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-            <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
+            <motion.div
+                className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "tween",
+                  delay: 0.1
+                }}
+            >
                 <a
                 href="#"
                 className="flex items-center space-x-2 rtl:space-x-reverse dark:text-white"
@@ -33,12 +43,34 @@ const Navbar = () => {
                     <GiHamburgerMenu size={20} />
                     </button>
                     <div className='flex dark:text-white items-center justify-center p-2 gap-3'>
-                        <a href="https://github.com/andreaprocopio" className='hover:scale-110 transition' target='_blank'>
+                        <motion.a
+                            href="https://github.com/andreaprocopio"
+                            target='_blank'
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{
+                                scale: 0.8,
+                            }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 500
+                            }}
+                        >
                             <FaGithub size={20} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/andrea-procopio-79a11b180/" className='cursor-pointer hover:scale-110 transition' target='_blank' >
+                        </motion.a>
+                        <motion.a
+                            href="https://www.linkedin.com/in/andrea-procopio-79a11b180/"
+                            target='_blank'
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{
+                                scale: 0.8,
+                            }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 500
+                            }}
+                        >
                             <FaLinkedin size={20}  />
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
                 <div
@@ -72,7 +104,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 </div>
-            </div>
+            </motion.div>
         </nav>
     )
 }

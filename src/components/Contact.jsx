@@ -1,6 +1,7 @@
 import React from 'react'
 import Hr from './Hr'
 import { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Contact = ({showAlert}) => {
 
@@ -35,7 +36,16 @@ const Contact = ({showAlert}) => {
     const messageRef = useRef(null)
     return (
         <section className="bg-white dark:bg-gray-900 py-10">
-            <div className='max-w-screen-lg mx-auto p-4 text-center space-y-16'>
+            <motion.div
+                className='max-w-screen-lg mx-auto p-4 text-center space-y-16'
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "tween",
+                  delay: 0.1
+                }}
+            >
                 <Hr />
                 <div className="mx-auto max-w-screen-md">
                     <h2 id="contact" className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
@@ -93,15 +103,23 @@ const Contact = ({showAlert}) => {
                         ref={messageRef}
                         />
                     </div>
-                    <button
+                    <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{
+                        scale: 0.8,
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 500
+                    }}
                     type="submit"
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                     >
                     Send message
-                    </button>
+                    </motion.button>
                     </form>
                 </div>
-            </div>
+            </motion.div>
         </section>
 
     )

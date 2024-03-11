@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import SuccessAlert from './components/SuccessAlert';
 import { useState } from 'react';
 import Footer from './components/Footer';
+import { AnimatePresence } from 'framer-motion';
 
 
 const App = () => {
@@ -29,7 +30,9 @@ const App = () => {
       <ProjectsGrid />
       <TechStack />
       <Contact showAlert={showAlert} />
-      { alert && <SuccessAlert closeAlert={closeAlert} /> }
+      <AnimatePresence>
+        { alert && <SuccessAlert closeAlert={closeAlert} /> }
+      </AnimatePresence>
       <Footer />
     </>
   )
