@@ -30,6 +30,7 @@ const ProjectsGrid = () => {
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-3'>
                 <ProjectCard technology={"React.js"} name={"Click for Weather"} imgSrc={"/click-for-weather.png"} bgCol={"bg-orange-500"} link={"https://click-for-weather.netlify.app/"}/>
                 <ProjectCard technology={"Next.js"} name={"Info Stream"} imgSrc={"/info-stream.png"} bgCol={"bg-teal-500"} link={"https://info-stream.vercel.app/"} />
+                <ProjectCard technology={"HTML, CSS & JS"} name={"Old Portfolio"} imgSrc={"/old-portfolio.png"} bgCol={"bg-purple-500"} link={"https://andreaprocopio.github.io/"} />
             </div>
         </motion.div>
     </section>

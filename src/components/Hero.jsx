@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         <div className="mt-8 lg:mt-0 lg:col-span-6 flex">
         <img
-            src="/hero-illustration.png"
+            src="/picture-hero.png"
             alt="mockup"
         />
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GiHamburgerMenu, GiTechnoHeart } from "react-icons/gi";
+import { GrDocumentPdf } from "react-icons/gr";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -63,6 +64,20 @@ const Navbar = () => {
                             }}
                         >
                             <FaLinkedin size={20}  />
+                        </motion.a>
+                        <motion.a
+                            href="/andreaprocopio_curriculum.pdf"
+                            download={true}
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{
+                                scale: 0.8,
+                            }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 500
+                            }}
+                        >
+                            <GrDocumentPdf size={20} />
                         </motion.a>
                     </div>
                 </div>
