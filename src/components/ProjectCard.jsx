@@ -56,7 +56,7 @@ const ProjectCard = ({ technology, name, imgSrc, bgCol, link }) => {
         </div>
         <div className="relative text-white px-6 pb-6 mt-6">
         <span className="block opacity-75 -mb-1 text-left">{technology}</span>
-        <div className="flex justify-center sm:justify-between">
+        <div className="flex justify-start sm:justify-between">
             <span className="block font-semibold text-xl">{name}</span>
         </div>
         </div>
