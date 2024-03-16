@@ -18,7 +18,7 @@ const TechStack = () => {
   };
 
   return (
-    <section className='bg-white dark:bg-gray-900 py-10'>
+    <section className='bg-white dark:bg-gray-900 py-10' id="skills">
         <motion.div
           className='max-w-screen-lg mx-auto p-4 text-center  space-y-16'
           initial={{ opacity: 0, y: 15 }}
@@ -32,7 +32,7 @@ const TechStack = () => {
             <Hr />
 
             <div className='space-y-3'>
-                <h3 id="skills" className="text-4xl font-bold dark:text-white underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">Tech Stack</h3>
+                <h3 className="text-4xl font-bold dark:text-white underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">Tech Stack</h3>
                 <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                   My expertise encompasses a dynamic array of evolving technologies, ensuring that I stay at the forefront of innovation.
                 </p>
