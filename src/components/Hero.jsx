@@ -21,7 +21,7 @@ const Hero = () => {
 
             <a href="#projects" className="mt-6 block font-medium text-blue-600 dark:text-blue-500 hover:underline">Get to know me</a>
         </div>
-        <div className="mt-8 lg:mt-0 lg:col-span-6 flex">
+        <div className="mt-8 lg:mt-0 lg:col-span-6 flex justify-center">
         <img
             src="/picture-hero.png"
             alt="mockup"

@@ -12,14 +12,15 @@ const TechCard = ({ iconName }) => {
   };
 
   return (
-    <motion.div variants={item} className="border inline-flex relative *:relative *:size-10
-                    *:m-auto size-20  rounded-xl dark:bg-gray-900
+    <motion.div variants={item} className="border inline-flex flex-col relative rounded-xl dark:bg-gray-900
                     dark:border-white/15 before:rounded-[11px] before:absolute
-                    before:inset-0 before:border-t before:border-white before:from-gray-100
+                    before:inset-0 before:border-t before:border-white
                     dark:before:border-white/20 before:bg-gradient-to-b
                     dark:before:from-white/10 dark:before:to-transparent before:shadow
-                    dark:before:shadow-gray-950 shrink-0">
-        <img src={`/icons/${iconName}.png`} alt={`${iconName}`} />
+                    dark:before:shadow-gray-950 shrink-0 justify-center items-center py-4
+                    gap-2 w-24">
+        <img src={`/icons/${iconName}.png`} alt={`${iconName}`} className='w-10 h-auto'/>
+        <p className='text-sm font-normal text-gray-500 lg:text-base dark:text-gray-400'>{iconName}</p>
     </motion.div>
   )
 }

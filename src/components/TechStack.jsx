@@ -44,14 +44,17 @@ const TechStack = () => {
               initial="hidden"
               whileInView="visible"
             >
-              <TechCard iconName={"react"} />
-              <TechCard iconName={"js"} />
-              <TechCard iconName={"html"} />
-              <TechCard iconName={"tailwind"} />
-              <TechCard iconName={"sass"} />
-              <TechCard iconName={"css"} />
-              <TechCard iconName={"python"} />
-              <TechCard iconName={"docker"} />
+              <TechCard iconName={"ReactJS"} />
+              <TechCard iconName={"NextJS"} />
+              <TechCard iconName={"Typescript"} />
+              <TechCard iconName={"JavaScript"} />
+              <TechCard iconName={"HTML"} />
+              <TechCard iconName={"Tailwind"} />
+              <TechCard iconName={"SASS"} />
+              <TechCard iconName={"CSS"} />
+              <TechCard iconName={"Python"} />
+              <TechCard iconName={"Docker"} />
+              <TechCard iconName={"SQL"} />
             </motion.div>
 
         </motion.div>
